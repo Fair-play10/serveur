@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db" // Change to your preferred database
+  provider = "postgresql"
+  url      = "postgresql://postgres:0000@localhost:5432/fair"// Change to your preferred database
 }
 
 model Reservation {
@@ -32,3 +32,11 @@ model MenuItem {
   price      Float
   category   String
 }
+
+
+model User {
+   id         Int      @id @default(autoincrement())
+  email       String  @unique
+  password    String
+}
+

@@ -1,0 +1,67 @@
+[
+    {
+      
+      "name": "#THATSALADTHO",
+      "description": "shaved celery, avocado, trumpet mushroom, parm, fresh black truffle",
+      "price": 22.0,
+      "category": "PIATTI DEL GIORNO"
+    },
+    {
+    
+      "name": "CHICKEN LIVER MOUSSE",
+      "description": "brioche, pickled ramp, preserved plum, pickled mustard seed",
+      "price": 14.0,
+      "category": "PIATTI DEL GIORNO"
+    },
+    {
+     
+      "name": "EGG YOLK RAVIOLO",
+      "description": "quattro formaggi filled, brown butter pecan, crispy sage, trumpet mushroom, balsamico",
+      "price": 30.0,
+      "category": "PIATTI DEL GIORNO"
+    },
+    {
+      
+      "name": "RAGÙ ALLA NAPOLETANA",
+      "description": "tomato braised pork osso bucco, soppressata meatballs, italian sausage, fusilli rustico, wilted escarole, wild oregano",
+      "price": 96.0,
+      "category": "PER LA TAVOLA"
+    },
+    {
+      
+      "name": "PRIME 20 OZ BONE-IN BLACK ANGUS STRIP STEAK",
+      "description": "primolio extra virgin olive oil, tropea onion, dario's sea salt, fennel pollen",
+      "price": 98.0,
+      "category": "PER LA TAVOLA"
+    },
+    {
+     
+      "name": "SOPPRESSATA MEATBALL",
+      "description": null,
+      "price": 10.0,
+      "category": "CONTORNI"
+    },
+    {
+     
+      "name": "GRILLED ITALIAN SAUSAGE",
+      "description": null,
+      "price": 9.0,
+      "category": "CONTORNI"
+    },
+    {
+     
+      "name": "WILTED ESCAROLE",
+      "description": null,
+      "price": 7.0,
+      "category": "CONTORNI"
+    },
+    {
+      
+      "name": "CRISPY YUKON POTATOES",
+      "description": null,
+      "price": 8.0,
+      "category": "CONTORNI"
+    }
+  
+  ]
+  

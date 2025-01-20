@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const reservationRoutes = require('./routes/reservationRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const menuRoutes = require('./routes/menuRoutes');
+const adminRoutes =require('./routes/adminRoutes')
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(bodyParser.json());
 app.use('/api/reservations', reservationRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/menu', menuRoutes);
+app.use('/api/admin',adminRoutes)
 
 // Error Handling
 app.use((err, req, res, next) => {

@@ -1,0 +1,33 @@
+[
+    {
+      
+      "email": "johndoe@example.com",
+      "subject": "Inquiry about Reservations",
+      "content": "I would like to know if you have any availability for 4 people this weekend."
+    },
+    {
+      
+      "email": "janesmith@example.com",
+      "subject": "Feedback on Last Visit",
+      "content": "I wanted to let you know that the service last night was exceptional. Thank you!"
+    },
+    {
+      
+      "email": "michaeljohnson@example.com",
+      "subject": "Complaint about Food Quality",
+      "content": "The food quality during my last visit was below expectations. Please address this issue."
+    },
+    {
+      
+      "email": "emilydavis@example.com",
+      "subject": "Event Booking Request",
+      "content": "I am interested in booking your venue for a private event. Can you share the details?"
+    },
+    {
+     
+      "email": "chrislee@example.com",
+      "subject": "Question about Menu Items",
+      "content": "Do you have gluten-free options available on your menu?"
+    }
+  ]
+  

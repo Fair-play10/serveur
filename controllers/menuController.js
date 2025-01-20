@@ -1,4 +1,4 @@
-const prisma = require('../prismaClient');
+const prisma = require("../db/prisma")
 
 const addMenuItem = async (req, res) => {
   try {
@@ -13,9 +13,10 @@ const addMenuItem = async (req, res) => {
 
 const fetchMenu = async (req, res) => {
   try {
-    const menuItems = await prisma.menuItem.findMany();
+    const menuItems = await prisma.MenuItem.findMany();
     res.status(200).json(menuItems);
   } catch (error) {
+    console.log(error)
     res.status(400).json({ error: 'Failed to fetch menu items' });
   }
 };

@@ -1,5 +1,4 @@
-const prisma = require('../prismaClient');
-
+const prisma = require("../db/prisma")
 const createContact = async (req, res) => {
   try {
     const contact = await prisma.contact.create({

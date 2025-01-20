@@ -1,0 +1,53 @@
+[
+    {
+      
+      "name": "John Doe",
+      "numberOfPersons": 4,
+      "seating": "Window",
+      "date": "2025-01-20T19:00:00Z",
+      "time": "19:00",
+      "phone": "+1234567890",
+      "comments": "Please arrange a high chair for a toddler."
+    },
+    {
+      
+      "name": "Jane Smith",
+      "numberOfPersons": 2,
+      "seating": "Patio",
+      "date": "2025-01-21T20:30:00Z",
+      "time": "20:30",
+      "phone": "+9876543210",
+      "comments": null
+    },
+    {
+     
+      "name": "Michael Johnson",
+      "numberOfPersons": 6,
+      "seating": "Booth",
+      "date": "2025-01-22T18:45:00Z",
+      "time": "18:45",
+      "phone": "+1122334455",
+      "comments": "Celebrating a birthday."
+    },
+    {
+      
+      "name": "Emily Davis",
+      "numberOfPersons": 3,
+      "seating": "Bar",
+      "date": "2025-01-23T21:15:00Z",
+      "time": "21:15",
+      "phone": "+5566778899",
+      "comments": "Prefers corner seating."
+    },
+    {
+      
+      "name": "Chris Lee",
+      "numberOfPersons": 1,
+      "seating": "Counter",
+      "date": "2025-01-24T17:30:00Z",
+      "time": "17:30",
+      "phone": "+4433221100",
+      "comments": null
+    }
+  ]
+  

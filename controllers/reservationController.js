@@ -1,4 +1,4 @@
-const prisma = require('../prismaClient');
+const prisma = require("../db/prisma")
 
 const createReservation = async (req, res) => {
   try {
