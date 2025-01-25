@@ -2,11 +2,15 @@ const prisma = require("../db/prisma")
 
 const createReservation = async (req, res) => {
   try {
+  let body=req.body
+  body.numberOfPersons=parseInt(body.numberOfPersons)
     const reservation = await prisma.reservation.create({
-      data: req.body,
+      data: body,
     });
     res.status(201).json(reservation);
   } catch (error) {
+    console.log(error);
+    
     res.status(400).json({ error: 'Failed to create reservation' });
   }
 };

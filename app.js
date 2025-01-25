@@ -4,9 +4,14 @@ const reservationRoutes = require('./routes/reservationRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const menuRoutes = require('./routes/menuRoutes');
 const adminRoutes =require('./routes/adminRoutes')
-
+const cors = require('cors');
 const app = express();
+const corsOptions = {
+  origin: 'http://localhost:8081', // Only allow requests from this domain
+  methods: ['GET', 'POST'], // Allow only specific HTTP methods
+};
 
+app.use(cors(corsOptions));
 // Middleware
 app.use(bodyParser.json());
 

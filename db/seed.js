@@ -1,41 +1,74 @@
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
+async function main() {
+  const data = [
 
-const prisma = require("./prisma.js");
-const menuItems =require("../data/MenuItems.json")
-const reservation =require("../data/Reservation.json")
-const contact =require("../data/Contact.json")
+    {
+      "category": "CONTORNI",
+      "items": [
+        {
+          "name": "SOPPRESSATA MEATBALL",
+          description: "",
+          "price": 10
+        },
+        {
+          "name": "GRILLED ITALIAN SAUSAGE",
+          description: "",
 
-const seed = async () => {
-    await prisma.menuItem.createMany({ data: menuItems, skipDuplicates: true }).then(
-     
-      (response) => {
-        console.log(menuItems)
-        console.log("menu seeded  ", response);
+          "price": 9
+          
+        },
+        {
+          "name": "WILTED ESCAROLE",
+          description: "",
 
-      }
-    );
+          "price": 7
+        },
+        {
+          "name": "CRISPY YUKON POTATOES",
+          description: "",
 
+          "price": 8
+        }
+      ]
+    }
+  ]
 
-    await prisma.Reservation.createMany({ data: reservation, skipDuplicates: true }).then(
-     
-      (response) => {
-        console.log(menuItems)
-        console.log("nik zzeby ow bara  ", response);
+  for (const categoryData of data) {
+    const createdCategory = await prisma.category.create({
+      data: {
+        name: categoryData.category,
+        items: {
+          create: categoryData.items.map((item) => ({
+            name: item.name,
+            description: item.description,
+            price: item.price,
+            unit: item.unit || null,
+            extras: item.extras
+              ? {
+                  create: Object.entries(item.extras).map(([name, price]) => ({
+                    name,
+                    price,
+                  })),
+                }
+              : undefined,
+          })),
+        },
+      },
+    });
 
-      }
-    );
-
-    await prisma.Contact.createMany({ data:contact , skipDuplicates: true }).then(
-     
-      (response) => {
-        console.log(menuItems)
-        console.log(" brass ommek e5dem 3asba ", response);
-      }
-    );
-  
+    console.log(`Created category: ${createdCategory.name}`);
+  }
 }
 
-seed().catch((error) => {
-  console.error("Error seeding database:", error);
-}
-)
+main()
+  .then(() => {
+    console.log("Seeding completed!");
+    prisma.$disconnect();
+  })
+  .catch((error) => {
+    console.error("Error seeding data:", error);
+    prisma.$disconnect();
+    process.exit(1);
+  });
